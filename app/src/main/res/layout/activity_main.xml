@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layOut"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon">
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/link"
+    android:maxLines="1"
+    android:textSize="15dp"
+    android:layout_marginBottom="35dp"
+    android:gravity="center"
+    android:layout_gravity="bottom"/>
+
+</LinearLayout>
