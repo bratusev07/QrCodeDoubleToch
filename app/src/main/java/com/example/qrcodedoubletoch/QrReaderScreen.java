@@ -47,7 +47,10 @@ public class QrReaderScreen extends AppCompatActivity {
                 .build();
 
         cameraSource = new CameraSource.Builder(this, barcodeDetector)
-                .setRequestedPreviewSize(640, 480)
+                .setRequestedPreviewSize(1920, 1080)
+                .setFacing(CameraSource.CAMERA_FACING_BACK)
+                .setRequestedFps(30.0f)
+                .setAutoFocusEnabled(true)
                 .build();
 
         cameraPreview.getHolder().addCallback(new SurfaceHolder.Callback() {
@@ -113,5 +116,13 @@ public class QrReaderScreen extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent();
+        setResult(1, intent);
+        finish();
     }
 }
